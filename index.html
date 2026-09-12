@@ -3,267 +3,939 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="icon" type="image/png" sizes="32x32" href="https://firebasestorage.googleapis.com/v0/b/dcgupdated.appspot.com/o/files%2FmyImg.png?alt=media&token=afb3b3ec-2c69-434d-be84-ad9f3a23e57f">
-   
-   
-   <style type="text/css" media="all">
-       
-       
-       * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Inter", sans-serif;
-    color: hsl(0, 0%, 100%);
-}
+    <link rel="icon"
+        type="image/png"
+        sizes="32x32"
+        href="https://firebasestorage.googleapis.com/v0/b/dcgupdated.appspot.com/o/files%2FmyImg.png?alt=media&token=afb3b3ec-2c69-434d-be84-ad9f3a23e57f">
 
-
-
-
-.Container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-color: hsl(0, 0%, 8%);
-    width: 100%;
-    height: 100vh;
-}
-
-.wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 80%;
-    height: fit-content;
-    background-color: hsl(0, 0%, 12%);
-    padding: 15px;
-    border-radius: 5px;
-}
-
-.profile-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 20px;
-    height: fit-content;
-}
-
-.profile-container_imageContainer {
-    overflow: hidden;
-    width: 100%;
-    height:fit-content;
-    display: flex;
-    justify-content: center;
-    align-items: center;
- 
-}
-.profile-container_imageContainer img {
-    width: 100px;
-  height: 100px;
-  object-fit: cover;
-  border-radius: 50%;
-  display: block;
-  margin: 0 auto;
-  overflow: hidden;
-}
-
-.profileName {
-    font-size: 20px;
-    font-weight: 600;
-    color: hsl(0, 0%, 100%);
-}
-
-.ProfileLocation {
-    font-size: 14px;
-    font-weight: 400;
-    color: hsl(75, 94%, 57%);
-}
-
-.profileDuscription {
-    font-size: 14px;
-    font-weight: 300;
-    color: hsl(0, 0%, 100%);
-}
-
-.link-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 20px;
-    gap: 20px;
-    width: 100%;
-}
-
-.link-container ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 20px;
-    width: 100%;
-}
-.link-container ul li a {
-    width: 100%;
-    text-decoration: none;
-    text-align: center;
-    font-size: 14px;
-    padding: 18px;
-    background-color: black;
-    font-weight: 800;
-    font-family: inherit;
-    border-radius: 5px;
-    background-color: hsl(0, 0%, 20%);
-    cursor: pointer;
-    transition: all ease in-out .5s;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    
-
-}
-
-svg{
-   width: 20px;
-   font-size:20px;
-   color: white;
-   background-color: white;
-   border-radius: 50px;
-}
-
-.link-container ul li a:hover {
-    background-color: hsl(75, 94%, 57%);
-    color: black ;
-}
-
-.link-container ul li {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 20px;
-    width: 100%;
-
-
-}
-
-
-.attribution {
-    font-size: 11px;
-    text-align: center;
-}
-.attribution a {
-    color: hsl(228, 45%, 44%);
-    text-decoration: none;
-}
-   </style>
-    
-    
-    
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
 
+    <title>Thompson Solomon — Developer</title>
 
-    <title> Meet | Raythompson</title>
+    <style>
+
+        :root {
+            --bg: #07090a;
+            --card: rgba(18, 21, 22, 0.82);
+            --card-hover: rgba(28, 32, 33, 0.95);
+            --border: rgba(255, 255, 255, 0.08);
+
+            --green: #c8ea80;
+            --green-dark: #8fb94c;
+
+            --white: #ffffff;
+            --muted: #92989a;
+
+            --radius: 18px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Inter", sans-serif;
+            background: var(--bg);
+            color: var(--white);
+            min-height: 100vh;
+        }
+
+        /* =========================
+           BACKGROUND
+        ========================== */
+
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            z-index: -2;
+
+            background:
+                radial-gradient(
+                    circle at 20% 10%,
+                    rgba(200, 234, 128, 0.08),
+                    transparent 30%
+                ),
+                radial-gradient(
+                    circle at 80% 80%,
+                    rgba(75, 150, 100, 0.08),
+                    transparent 30%
+                ),
+                #07090a;
+        }
+
+        body::after {
+            content: "";
+            position: fixed;
+            inset: 0;
+            z-index: -1;
+            pointer-events: none;
+
+            background-image:
+                linear-gradient(
+                    rgba(255,255,255,0.018) 1px,
+                    transparent 1px
+                ),
+                linear-gradient(
+                    90deg,
+                    rgba(255,255,255,0.018) 1px,
+                    transparent 1px
+                );
+
+            background-size: 45px 45px;
+
+            mask-image: linear-gradient(
+                to bottom,
+                black,
+                transparent 80%
+            );
+        }
+
+        /* =========================
+           MAIN
+        ========================== */
+
+        .container {
+            min-height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            padding: 40px 20px;
+        }
+
+        .wrapper {
+            width: 100%;
+            max-width: 520px;
+
+            padding: 28px;
+
+            background: var(--card);
+
+            border: 1px solid var(--border);
+
+            border-radius: 28px;
+
+            backdrop-filter: blur(22px);
+            -webkit-backdrop-filter: blur(22px);
+
+            box-shadow:
+                0 30px 80px rgba(0,0,0,0.45),
+                inset 0 1px 0 rgba(255,255,255,0.04);
+
+            animation: containerIn 0.8s ease forwards;
+        }
+
+        @keyframes containerIn {
+
+            from {
+                opacity: 0;
+                transform: translateY(25px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* =========================
+           TOP BAR
+        ========================== */
+
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            margin-bottom: 28px;
+        }
+
+        .brand {
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+
+            color: var(--muted);
+        }
+
+        .status {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            padding: 7px 11px;
+
+            border-radius: 100px;
+
+            background: rgba(200, 234, 128, 0.08);
+
+            border: 1px solid rgba(200, 234, 128, 0.15);
+
+            color: var(--green);
+
+            font-size: 11px;
+            font-weight: 600;
+        }
+
+        .status-dot {
+            width: 7px;
+            height: 7px;
+
+            border-radius: 50%;
+
+            background: var(--green);
+
+            box-shadow: 0 0 12px var(--green);
+
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+
+            0%, 100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.4;
+            }
+        }
+
+        /* =========================
+           PROFILE
+        ========================== */
+
+        .profile {
+            text-align: center;
+        }
+
+        .profile-image-wrapper {
+            position: relative;
+
+            width: 110px;
+            height: 110px;
+
+            margin: 0 auto 20px;
+        }
+
+        .profile-image-wrapper::before {
+            content: "";
+
+            position: absolute;
+            inset: -5px;
+
+            border-radius: 50%;
+
+            background: linear-gradient(
+                135deg,
+                var(--green),
+                transparent 60%
+            );
+
+            opacity: 0.8;
+        }
+
+        .profile-image-wrapper::after {
+            content: "";
+
+            position: absolute;
+            inset: 0;
+
+            border-radius: 50%;
+
+            box-shadow:
+                0 0 40px rgba(200,234,128,0.12);
+        }
+
+        .profile-image {
+            position: relative;
+            z-index: 2;
+
+            width: 110px;
+            height: 110px;
+
+            object-fit: cover;
+
+            border-radius: 50%;
+
+            border: 4px solid #101313;
+
+            display: block;
+        }
+
+        .verified {
+            position: absolute;
+
+            z-index: 5;
+
+            right: 1px;
+            bottom: 3px;
+
+            width: 25px;
+            height: 25px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background: var(--green);
+
+            color: #101510;
+
+            border: 4px solid #101313;
+
+            font-size: 11px;
+            font-weight: 900;
+        }
+
+        .name {
+            font-size: clamp(25px, 6vw, 32px);
+
+            font-weight: 800;
+
+            letter-spacing: -1.2px;
+
+            margin-bottom: 8px;
+        }
+
+        .location {
+            color: var(--green);
+
+            font-size: 13px;
+
+            font-weight: 600;
+
+            margin-bottom: 15px;
+        }
+
+        .description {
+            max-width: 390px;
+
+            margin: auto;
+
+            color: #aeb3b4;
+
+            font-size: 14px;
+
+            line-height: 1.7;
+        }
+
+        /* =========================
+           SOCIALS
+        ========================== */
+
+        .socials {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            gap: 10px;
+
+            margin: 24px 0 28px;
+        }
+
+        .social {
+            width: 42px;
+            height: 42px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            border-radius: 12px;
+
+            background: rgba(255,255,255,0.04);
+
+            border: 1px solid var(--border);
+
+            color: white;
+
+            text-decoration: none;
+
+            transition:
+                transform 0.25s ease,
+                background 0.25s ease,
+                border-color 0.25s ease;
+        }
+
+        .social svg {
+            width: 19px;
+            height: 19px;
+
+            fill: currentColor;
+        }
+
+        .social:hover {
+            transform: translateY(-4px);
+
+            background: rgba(200,234,128,0.1);
+
+            border-color: rgba(200,234,128,0.3);
+
+            color: var(--green);
+        }
+
+        /* =========================
+           LINKS
+        ========================== */
+
+        .links {
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 12px;
+        }
+
+        .link {
+            position: relative;
+
+            display: flex;
+
+            align-items: center;
+
+            width: 100%;
+
+            padding: 17px 18px;
+
+            border-radius: 14px;
+
+            background: rgba(255,255,255,0.045);
+
+            border: 1px solid var(--border);
+
+            color: white;
+
+            text-decoration: none;
+
+            transition:
+                transform 0.25s ease,
+                background 0.25s ease,
+                border-color 0.25s ease,
+                box-shadow 0.25s ease;
+        }
+
+        .link:hover {
+            transform: translateY(-3px);
+
+            background: rgba(200,234,128,0.08);
+
+            border-color: rgba(200,234,128,0.25);
+
+            box-shadow:
+                0 12px 30px rgba(0,0,0,0.25);
+        }
+
+        .link-icon {
+            width: 42px;
+            height: 42px;
+
+            flex-shrink: 0;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 11px;
+
+            background: rgba(255,255,255,0.07);
+
+            margin-right: 14px;
+        }
+
+        .link-icon svg {
+            width: 20px;
+            height: 20px;
+
+            fill: white;
+        }
+
+        .link-content {
+            flex: 1;
+
+            text-align: left;
+        }
+
+        .link-title {
+            display: block;
+
+            font-size: 14px;
+
+            font-weight: 700;
+
+            margin-bottom: 3px;
+        }
+
+        .link-description {
+            display: block;
+
+            font-size: 11px;
+
+            color: var(--muted);
+        }
+
+        .arrow {
+            color: #73797b;
+
+            font-size: 18px;
+
+            transition:
+                transform 0.25s ease,
+                color 0.25s ease;
+        }
+
+        .link:hover .arrow {
+            transform: translateX(4px);
+
+            color: var(--green);
+        }
+
+        /* =========================
+           WHATSAPP CTA
+        ========================== */
+
+        .contact {
+            margin-top: 14px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 8px;
+
+            padding: 15px;
+
+            border-radius: 14px;
+
+            background: var(--green);
+
+            color: #0a0d09;
+
+            text-decoration: none;
+
+            font-size: 13px;
+
+            font-weight: 800;
+
+            transition:
+                transform 0.25s ease,
+                box-shadow 0.25s ease;
+        }
+
+        .contact:hover {
+            transform: translateY(-3px);
+
+            box-shadow:
+                0 12px 35px rgba(200,234,128,0.18);
+        }
+
+        .contact svg {
+            width: 18px;
+            height: 18px;
+
+            fill: currentColor;
+        }
+
+        /* =========================
+           FOOTER
+        ========================== */
+
+        .footer {
+            text-align: center;
+
+            margin-top: 25px;
+
+            padding-top: 20px;
+
+            border-top: 1px solid var(--border);
+
+            color: #626869;
+
+            font-size: 10px;
+
+            line-height: 1.6;
+        }
+
+        .footer strong {
+            color: #8b9192;
+        }
+
+        /* =========================
+           MOBILE
+        ========================== */
+
+        @media (max-width: 500px) {
+
+            .container {
+                padding: 18px 12px;
+                align-items: flex-start;
+            }
+
+            .wrapper {
+                padding: 22px 16px;
+
+                margin-top: 10px;
+
+                border-radius: 22px;
+            }
+
+            .top-bar {
+                margin-bottom: 25px;
+            }
+
+            .profile-image-wrapper,
+            .profile-image {
+                width: 96px;
+                height: 96px;
+            }
+
+            .name {
+                font-size: 26px;
+            }
+
+            .description {
+                font-size: 13px;
+            }
+
+            .link {
+                padding: 14px;
+            }
+
+            .link-icon {
+                width: 38px;
+                height: 38px;
+            }
+
+        }
+
+    </style>
 </head>
-<body>
-    <div class="Container">
-        <div class="wrapper">
-            <div class="profile-container">
-                <div class="profile-container_imageContainer">
-                    <img src="https://firebasestorage.googleapis.com/v0/b/dcgupdated.appspot.com/o/files%2FmyImg.png?alt=media&token=afb3b3ec-2c69-434d-be84-ad9f3a23e57f" alt="photoImg" />
-                </div>
-                <p class="profileName">
-                    Thompson Solomon
-                <p class="ProfileLocation">
-                    Lagos, Nigeria
-                </p>
 
-                <p class="profileDescription">
-                    "Software developer | Web/mobile enthusiast | Always learning, always building"
-                </p>
-            </div>
-            
-            
-            
-            
-            <div class="link-container">
-                <ul>
-                    <li>
-                        
-                        
-                        <a href="https://github.com/thompsonsolomon">
-                            
-                            
-                            <div>
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>github</title><path d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z" /></svg>
-                            </div>
-                            GitHub
-                        </a>
-                    </li>
-                    
-                    
-                    <li>
-                        <a href="https://thompsonsolomonportfolio.netlify.app/">
-                            
-                            <div>
-                               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>face-man-profile</title><path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,8.39C13.57,9.4 15.42,10 17.42,10C18.2,10 18.95,9.91 19.67,9.74C19.88,10.45 20,11.21 20,12C20,16.41 16.41,20 12,20C9,20 6.39,18.34 5,15.89L6.75,14V13A1.25,1.25 0 0,1 8,11.75A1.25,1.25 0 0,1 9.25,13V14H12M16,11.75A1.25,1.25 0 0,0 14.75,13A1.25,1.25 0 0,0 16,14.25A1.25,1.25 0 0,0 17.25,13A1.25,1.25 0 0,0 16,11.75Z" /></svg>
-                            </div>
-                            Portfolio
-                        </a>
-                    </li>
-                    
-                    
-                    <li>
-                        <a href="https://www.linkedin.com/in/thompson-solomon-87283a232?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
-                            
-                            <div>
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>linkedin</title><path d="M19 3A2 2 0 0 1 21 5V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H19M18.5 18.5V13.2A3.26 3.26 0 0 0 15.24 9.94C14.39 9.94 13.4 10.46 12.92 11.24V10.13H10.13V18.5H12.92V13.57C12.92 12.8 13.54 12.17 14.31 12.17A1.4 1.4 0 0 1 15.71 13.57V18.5H18.5M6.88 8.56A1.68 1.68 0 0 0 8.56 6.88C8.56 5.95 7.81 5.19 6.88 5.19A1.69 1.69 0 0 0 5.19 6.88C5.19 7.81 5.95 8.56 6.88 8.56M8.27 18.5V10.13H5.5V18.5H8.27Z" /></svg>
-                            </div>
-                            LinkedIn
-                        </a>
-                    </li>
-                    
-                    
-                    <li>
-                        <a href="https://x.com/ThompsonSo86878?t=QOMRONfO3vsEu5X17NRV8w&s=09">
-                            
-                            <div>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>twitter</title><path d="M22.46,6C21.69,6.35 20.86,6.58 20,6.69C20.88,6.16 21.56,5.32 21.88,4.31C21.05,4.81 20.13,5.16 19.16,5.36C18.37,4.5 17.26,4 16,4C13.65,4 11.73,5.92 11.73,8.29C11.73,8.63 11.77,8.96 11.84,9.27C8.28,9.09 5.11,7.38 3,4.79C2.63,5.42 2.42,6.16 2.42,6.94C2.42,8.43 3.17,9.75 4.33,10.5C3.62,10.5 2.96,10.3 2.38,10C2.38,10 2.38,10 2.38,10.03C2.38,12.11 3.86,13.85 5.82,14.24C5.46,14.34 5.08,14.39 4.69,14.39C4.42,14.39 4.15,14.36 3.89,14.31C4.43,16 6,17.26 7.89,17.29C6.43,18.45 4.58,19.13 2.56,19.13C2.22,19.13 1.88,19.11 1.54,19.07C3.44,20.29 5.7,21 8.12,21C16,21 20.33,14.46 20.33,8.79C20.33,8.6 20.33,8.42 20.32,8.23C21.16,7.63 21.88,6.87 22.46,6Z" /></svg>
-                            </div>
-                            Twitter
-                        </a>
-                    </li>
-                    
-                    <li>
-                        <a href="https://www.instagram.com/thompsonsolomon87?igsh=YzljYTk1ODg3Zg==">
-                            
-                            <div>
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>instagram</title><path d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z" /></svg>
-                            </div>
-                            Instagram
-                        </a>
-                    </li>
-                </ul>
-                
-            </div>
+<body>
+
+<div class="container">
+
+    <main class="wrapper">
+
+        <!-- TOP -->
+
+        <div class="top-bar">
+
+            <span class="brand">
+                @RayThompson
+            </span>
+
+            <span class="status">
+                <span class="status-dot"></span>
+                Available
+            </span>
+
         </div>
-    <div class="attribution">
-        Chat me on <a href="https://wa.me/2349124919117?text=hello%20solomon%20can%20i%20meet%20you?">Whatsapp</a>
-         <a href="https://wa.me/2349124919117">
-          RayThompson❤️    
+
+
+        <!-- PROFILE -->
+
+        <section class="profile">
+
+            <div class="profile-image-wrapper">
+
+                <img
+                    class="profile-image"
+                    src="./image.png"
+                    alt="Thompson Solomon"
+                >
+
+                <span class="verified">
+                    ✓
+                </span>
+
+            </div>
+
+
+            <h1 class="name">
+                Thompson Solomon
+            </h1>
+
+
+            <p class="location">
+                Lagos, Nigeria
+            </p>
+
+
+            <p class="description">
+                Software developer building fast, useful and
+                scalable digital experiences for the web and mobile.
+            </p>
+
+        </section>
+
+
+        <!-- SOCIALS -->
+
+        <div class="socials">
+
+            <!-- Github -->
+
+            <a
+                class="social"
+                href="https://github.com/thompsonsolomon"
+                target="_blank"
+                aria-label="GitHub"
+            >
+
+                <svg viewBox="0 0 24 24">
+                    <path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.09.66-.22.66-.48v-1.69c-2.78.61-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03A9.56 9.56 0 0 1 12 6.84c.85 0 1.71.11 2.5.33 1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85V21c0 .27.18.58.67.48A10.01 10.01 0 0 0 22 12 10 10 0 0 0 12 2Z"/>
+                </svg>
+
+            </a>
+
+
+            <!-- LinkedIn -->
+
+            <a
+                class="social"
+                href="https://www.linkedin.com/in/thompson-solomon-87283a232"
+                target="_blank"
+                aria-label="LinkedIn"
+            >
+
+                <svg viewBox="0 0 24 24">
+                    <path d="M19 3A2 2 0 0 1 21 5V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H19M8 18V10H5.5V18H8M6.75 8.87A1.5 1.5 0 1 0 6.75 5.87A1.5 1.5 0 0 0 6.75 8.87M18.5 18V13.5C18.5 11.02 17.16 9.57 15.14 9.57C14.17 9.57 13.51 10.1 13.22 10.59V10H10.72V18H13.22V13.8C13.22 12.69 13.43 11.82 14.79 11.82C16.13 11.82 16.15 12.88 16.15 13.87V18H18.5Z"/>
+                </svg>
+
+            </a>
+
+
+            <!-- X -->
+
+            <a
+                class="social"
+                href="https://x.com/ThompsonSo86878"
+                target="_blank"
+                aria-label="X"
+            >
+
+                <svg viewBox="0 0 24 24">
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817-5.963 6.817H1.684l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.45-6.231Zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77Z"/>
+                </svg>
+
+            </a>
+
+
+            <!-- Instagram -->
+
+            <a
+                class="social"
+                href="https://www.instagram.com/thompsonsolomon87"
+                target="_blank"
+                aria-label="Instagram"
+            >
+
+                <svg viewBox="0 0 24 24">
+                    <path d="M7.8 2h8.4A5.8 5.8 0 0 1 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8A5.8 5.8 0 0 1 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2Zm-.2 2A3.6 3.6 0 0 0 4 7.6v8.8A3.6 3.6 0 0 0 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6A3.6 3.6 0 0 0 16.4 4H7.6ZM17.25 5.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"/>
+                </svg>
+
+            </a>
+
+        </div>
+
+
+        <!-- LINKS -->
+
+        <div class="links">
+
+
+            <!-- Github -->
+
+            <a
+                class="link"
+                href="https://github.com/thompsonsolomon"
+                target="_blank"
+            >
+
+                <div class="link-icon">
+
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.09.66-.22.66-.48v-1.69c-2.78.61-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03A9.56 9.56 0 0 1 12 6.84c.85 0 1.71.11 2.5.33 1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85V21c0 .27.18.58.67.48A10.01 10.01 0 0 0 22 12 10 10 0 0 0 12 2Z"/>
+                    </svg>
+
+                </div>
+
+                <div class="link-content">
+
+                    <span class="link-title">
+                        GitHub
+                    </span>
+
+                    <span class="link-description">
+                        Explore my code and projects
+                    </span>
+
+                </div>
+
+                <span class="arrow">
+                    →
+                </span>
+
+            </a>
+
+
+            <!-- Portfolio -->
+
+            <a
+                class="link"
+                href="https://thompsonsolomonportfolio.netlify.app/"
+                target="_blank"
+            >
+
+                <div class="link-icon">
+
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 2A10 10 0 1 0 12 22A10 10 0 0 0 12 2ZM12 4C13.6 5.4 14.6 7.4 14.9 10H9.1C9.4 7.4 10.4 5.4 12 4ZM4 12C4 11.3 4.1 10.6 4.3 10H7.1C7 10.7 7 11.3 7 12C7 12.7 7 13.3 7.1 14H4.3C4.1 13.4 4 12.7 4 12ZM12 20C10.4 18.6 9.4 16.6 9.1 14H14.9C14.6 16.6 13.6 18.6 12 20ZM16.9 14H19.7C19.9 13.4 20 12.7 20 12C20 11.3 19.9 10.6 19.7 10H16.9C17 10.7 17 11.3 17 12C17 12.7 17 13.3 16.9 14Z"/>
+                    </svg>
+
+                </div>
+
+                <div class="link-content">
+
+                    <span class="link-title">
+                        Portfolio
+                    </span>
+
+                    <span class="link-description">
+                        See what I've been building
+                    </span>
+
+                </div>
+
+                <span class="arrow">
+                    →
+                </span>
+
+            </a>
+
+
+            <!-- LinkedIn -->
+
+            <a
+                class="link"
+                href="https://www.linkedin.com/in/thompson-solomon-87283a232"
+                target="_blank"
+            >
+
+                <div class="link-icon">
+
+                    <svg viewBox="0 0 24 24">
+                        <path d="M19 3A2 2 0 0 1 21 5V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H19M8 18V10H5.5V18H8M6.75 8.87A1.5 1.5 0 1 0 6.75 5.87A1.5 1.5 0 0 0 6.75 8.87M18.5 18V13.5C18.5 11.02 17.16 9.57 15.14 9.57C14.17 9.57 13.51 10.1 13.22 10.59V10H10.72V18H13.22V13.8C13.22 12.69 13.43 11.82 14.79 11.82C16.13 11.82 16.15 12.88 16.15 13.87V18H18.5Z"/>
+                    </svg>
+
+                </div>
+
+                <div class="link-content">
+
+                    <span class="link-title">
+                        LinkedIn
+                    </span>
+
+                    <span class="link-description">
+                        Connect with me professionally
+                    </span>
+
+                </div>
+
+                <span class="arrow">
+                    →
+                </span>
+
+            </a>
+
+
+            <!-- X -->
+
+            <a
+                class="link"
+                href="https://x.com/ThompsonSo86878"
+                target="_blank"
+            >
+
+                <div class="link-icon">
+
+                    <svg viewBox="0 0 24 24">
+                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817-5.963 6.817H1.684l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.45-6.231Zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77Z"/>
+                    </svg>
+
+                </div>
+
+                <div class="link-content">
+
+                    <span class="link-title">
+                        X / Twitter
+                    </span>
+
+                    <span class="link-description">
+                        Follow my thoughts and updates
+                    </span>
+
+                </div>
+
+                <span class="arrow">
+                    →
+                </span>
+
+            </a>
+
+
+        </div>
+
+
+        <!-- WHATSAPP -->
+
+        <a
+            class="contact"
+            href="https://wa.me/2349124919117?text=hello%20solomon%20can%20i%20meet%20you?"
+            target="_blank"
+        >
+
+            <svg viewBox="0 0 24 24">
+                <path d="M12 2A10 10 0 0 0 2 12C2 13.8 2.47 15.5 3.36 17L2 22L7.15 20.65C8.59 21.53 10.27 22 12 22A10 10 0 1 0 12 2ZM12 20C10.5 20 9.05 19.58 7.8 18.8L7.5 18.62L4.45 19.45L5.27 16.47L5.08 16.16C4.37 14.94 4 13.5 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20ZM16.35 13.92C16.11 13.8 14.93 13.22 14.71 13.14C14.48 13.05 14.31 13.01 14.14 13.25C13.97 13.51 13.48 14.07 13.33 14.24C13.19 14.41 13.04 14.43 12.8 14.31C10.85 13.34 9.57 12.58 8.29 10.39C7.95 9.81 8.63 9.83 9.25 8.59C9.32 8.42 9.29 8.27 9.23 8.15C9.17 8.03 8.67 6.84 8.47 6.35C8.27 5.86 8.06 5.94 7.91 5.93C7.77 5.92 7.61 5.92 7.44 5.92C7.27 5.92 7 5.98 6.77 6.23C6.54 6.48 5.89 7.09 5.89 8.28C5.89 9.47 6.79 10.61 6.92 10.77C7.04 10.93 8.69 13.48 11.22 14.57C12.82 15.26 13.45 15.32 14.26 15.2C14.75 15.13 15.75 14.59 15.96 14C16.17 13.41 16.17 12.91 16.11 12.8C16.05 12.69 15.9 12.63 15.65 12.51Z"/>
+            </svg>
+
+            Chat with me on WhatsApp
+
         </a>
-    </div>
-    </div>
+
+
+        <!-- FOOTER -->
+
+        <footer class="footer">
+
+            Built with curiosity & code by
+            <strong>RayThompson</strong>
+
+        </footer>
+
+    </main>
+
+</div>
+
 </body>
-</html
+</html>
