@@ -1,941 +1,782 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="icon"
-        type="image/png"
-        sizes="32x32"
-        href="https://firebasestorage.googleapis.com/v0/b/dcgupdated.appspot.com/o/files%2FmyImg.png?alt=media&token=afb3b3ec-2c69-434d-be84-ad9f3a23e57f">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet">
-
-    <title>Thompson Solomon — Developer</title>
-
-    <style>
-
-        :root {
-            --bg: #07090a;
-            --card: rgba(18, 21, 22, 0.82);
-            --card-hover: rgba(28, 32, 33, 0.95);
-            --border: rgba(255, 255, 255, 0.08);
-
-            --green: #c8ea80;
-            --green-dark: #8fb94c;
-
-            --white: #ffffff;
-            --muted: #92989a;
-
-            --radius: 18px;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: "Inter", sans-serif;
-            background: var(--bg);
-            color: var(--white);
-            min-height: 100vh;
-        }
-
-        /* =========================
-           BACKGROUND
-        ========================== */
-
-        body::before {
-            content: "";
-            position: fixed;
-            inset: 0;
-            z-index: -2;
-
-            background:
-                radial-gradient(
-                    circle at 20% 10%,
-                    rgba(200, 234, 128, 0.08),
-                    transparent 30%
-                ),
-                radial-gradient(
-                    circle at 80% 80%,
-                    rgba(75, 150, 100, 0.08),
-                    transparent 30%
-                ),
-                #07090a;
-        }
-
-        body::after {
-            content: "";
-            position: fixed;
-            inset: 0;
-            z-index: -1;
-            pointer-events: none;
-
-            background-image:
-                linear-gradient(
-                    rgba(255,255,255,0.018) 1px,
-                    transparent 1px
-                ),
-                linear-gradient(
-                    90deg,
-                    rgba(255,255,255,0.018) 1px,
-                    transparent 1px
-                );
-
-            background-size: 45px 45px;
-
-            mask-image: linear-gradient(
-                to bottom,
-                black,
-                transparent 80%
-            );
-        }
 
-        /* =========================
-           MAIN
-        ========================== */
+  <meta charset="UTF-8">
+
+  <!-- =========================================================
+       PRIMARY SEO
+  ========================================================== -->
+
+  <title>Thompson Solomon (@RayThompson) | Software Developer</title>
+
+  <meta
+    name="description"
+    content="Thompson Solomon, also known as RayThompson, is a software developer from Lagos, Nigeria building fast, useful and scalable digital experiences for web and mobile."
+  >
+
+  <meta
+    name="author"
+    content="Thompson Solomon"
+  >
+
+  <meta
+    name="robots"
+    content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+  >
+
+  <meta
+    name="googlebot"
+    content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+  >
+
+  <meta
+    name="google"
+    content="notranslate"
+  >
+
+  <meta
+    name="theme-color"
+    content="#070908"
+  >
+
+  <meta
+    name="color-scheme"
+    content="dark"
+  >
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <!-- =========================================================
+       CANONICAL
+       CHANGE YOUR-DOMAIN TO YOUR REAL DOMAIN
+  ========================================================== -->
+
+  <link
+    rel="canonical"
+    href="https://meet-raymond.vercel.app/"
+  >
+
+  <!-- =========================================================
+       FAVICON
+  ========================================================== -->
+
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="./image.png"
+  >
+
+  <link
+    rel="apple-touch-icon"
+    href="./image.png"
+  >
+
+  <!-- =========================================================
+       PERFORMANCE
+  ========================================================== -->
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    rel="preload"
+    as="image"
+    href="./image.png"
+    fetchpriority="high"
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- =========================================================
+       OPEN GRAPH
+  ========================================================== -->
+
+  <meta
+    property="og:type"
+    content="profile"
+  >
+
+  <meta
+    property="og:title"
+    content="Thompson Solomon (@RayThompson) | Software Developer"
+  >
+
+  <meta
+    property="og:description"
+    content="Software developer from Lagos, Nigeria building fast, useful and scalable digital experiences for web and mobile."
+  >
+
+  <meta
+    property="og:url"
+    content="https://meet-raymond.vercel.app/"
+  >
+
+  <meta
+    property="og:site_name"
+    content="Thompson Solomon"
+  >
+
+  <meta
+    property="og:image"
+    content="https://meet-raymond.vercel.app/image.png"
+  >
+
+  <meta
+    property="og:image:alt"
+    content="Thompson Solomon — Software Developer"
+  >
+
+  <meta
+    property="og:image:type"
+    content="image/png"
+  >
+
+  <meta
+    property="profile:first_name"
+    content="Thompson"
+  >
+
+  <meta
+    property="profile:last_name"
+    content="Solomon"
+  >
+
+  <!-- =========================================================
+       X / TWITTER
+  ========================================================== -->
+
+  <meta
+    name="twitter:card"
+    content="summary_large_image"
+  >
+
+  <meta
+    name="twitter:title"
+    content="Thompson Solomon (@RayThompson) | Software Developer"
+  >
+
+  <meta
+    name="twitter:description"
+    content="Software developer building fast, useful and scalable digital experiences for web and mobile."
+  >
+
+  <meta
+    name="twitter:image"
+    content="https://meet-raymond.vercel.app/image.png"
+  >
+
+  <meta
+    name="twitter:image:alt"
+    content="Thompson Solomon — Software Developer"
+  >
+
+  <meta
+    name="twitter:creator"
+    content="@ThompsonSo86878"
+  >
+
+  <!-- =========================================================
+       JSON-LD — PERSON
+  ========================================================== -->
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://meet-raymond.vercel.app/#person",
+    "name": "Thompson Solomon",
+    "givenName": "Thompson",
+    "familyName": "Solomon",
+    "alternateName": [
+      "RayThompson",
+      "Ray Thompson"
+    ],
+    "url": "https://meet-raymond.vercel.app/",
+    "image": "https://meet-raymond.vercel.app/image.png",
+    "jobTitle": "Software Developer",
+    "description": "Thompson Solomon, also known as RayThompson, is a software developer from Lagos, Nigeria building fast, useful and scalable digital experiences for web and mobile.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Lagos",
+      "addressCountry": "NG"
+    },
+    "sameAs": [
+      "https://github.com/thompsonsolomon",
+      "https://www.linkedin.com/in/thompson-solomon-87283a232",
+      "https://x.com/ThompsonSo86878",
+      "https://www.instagram.com/thompsonsolomon87",
+      "https://thompsonsolomonportfolio.netlify.app/"
+    ],
+    "knowsAbout": [
+      "Software Development",
+      "Web Development",
+      "Frontend Development",
+      "Mobile Development",
+      "JavaScript",
+      "React",
+      "Shopify",
+      "Web Performance",
+      "UI Development"
+    ]
+  }
+  </script>
+
+  <!-- =========================================================
+       JSON-LD — PROFILE PAGE
+  ========================================================== -->
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "@id": "https://meet-raymond.vercel.app/#profile",
+    "url": "https://meet-raymond.vercel.app/",
+    "name": "Thompson Solomon | RayThompson",
+    "description": "Official profile of Thompson Solomon, also known as RayThompson, a software developer from Lagos, Nigeria.",
+    "mainEntity": {
+      "@id": "https://meet-raymond.vercel.app/#person"
+    }
+  }
+  </script>
+
+  <!-- =========================================================
+       JSON-LD — WEBSITE
+  ========================================================== -->
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://meet-raymond.vercel.app/#website",
+    "url": "https://meet-raymond.vercel.app/",
+    "name": "Thompson Solomon",
+    "alternateName": "RayThompson",
+    "description": "Official website of Thompson Solomon, also known as RayThompson.",
+    "publisher": {
+      "@id": "https://meet-raymond.vercel.app/#person"
+    }
+  }
+  </script>
+
+
+  <!-- =========================================================
+       STYLES
+  ========================================================== -->
+
+<link rel="stylesheet" href="styles.css">
 
-        .container {
-            min-height: 100vh;
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            padding: 40px 20px;
-        }
-
-        .wrapper {
-            width: 100%;
-            max-width: 520px;
-
-            padding: 28px;
-
-            background: var(--card);
-
-            border: 1px solid var(--border);
-
-            border-radius: 28px;
-
-            backdrop-filter: blur(22px);
-            -webkit-backdrop-filter: blur(22px);
-
-            box-shadow:
-                0 30px 80px rgba(0,0,0,0.45),
-                inset 0 1px 0 rgba(255,255,255,0.04);
-
-            animation: containerIn 0.8s ease forwards;
-        }
-
-        @keyframes containerIn {
-
-            from {
-                opacity: 0;
-                transform: translateY(25px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* =========================
-           TOP BAR
-        ========================== */
-
-        .top-bar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-
-            margin-bottom: 28px;
-        }
-
-        .brand {
-            font-size: 13px;
-            font-weight: 700;
-            letter-spacing: 0.5px;
-
-            color: var(--muted);
-        }
-
-        .status {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-
-            padding: 7px 11px;
-
-            border-radius: 100px;
-
-            background: rgba(200, 234, 128, 0.08);
-
-            border: 1px solid rgba(200, 234, 128, 0.15);
-
-            color: var(--green);
-
-            font-size: 11px;
-            font-weight: 600;
-        }
-
-        .status-dot {
-            width: 7px;
-            height: 7px;
-
-            border-radius: 50%;
-
-            background: var(--green);
-
-            box-shadow: 0 0 12px var(--green);
-
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-
-            0%, 100% {
-                opacity: 1;
-            }
-
-            50% {
-                opacity: 0.4;
-            }
-        }
-
-        /* =========================
-           PROFILE
-        ========================== */
-
-        .profile {
-            text-align: center;
-        }
-
-        .profile-image-wrapper {
-            position: relative;
-
-            width: 110px;
-            height: 110px;
-
-            margin: 0 auto 20px;
-        }
-
-        .profile-image-wrapper::before {
-            content: "";
-
-            position: absolute;
-            inset: -5px;
-
-            border-radius: 50%;
-
-            background: linear-gradient(
-                135deg,
-                var(--green),
-                transparent 60%
-            );
-
-            opacity: 0.8;
-        }
-
-        .profile-image-wrapper::after {
-            content: "";
-
-            position: absolute;
-            inset: 0;
-
-            border-radius: 50%;
-
-            box-shadow:
-                0 0 40px rgba(200,234,128,0.12);
-        }
-
-        .profile-image {
-            position: relative;
-            z-index: 2;
-
-            width: 110px;
-            height: 110px;
-
-            object-fit: cover;
-
-            border-radius: 50%;
-
-            border: 4px solid #101313;
-
-            display: block;
-        }
-
-        .verified {
-            position: absolute;
-
-            z-index: 5;
-
-            right: 1px;
-            bottom: 3px;
-
-            width: 25px;
-            height: 25px;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            border-radius: 50%;
-
-            background: var(--green);
-
-            color: #101510;
-
-            border: 4px solid #101313;
-
-            font-size: 11px;
-            font-weight: 900;
-        }
-
-        .name {
-            font-size: clamp(25px, 6vw, 32px);
-
-            font-weight: 800;
-
-            letter-spacing: -1.2px;
-
-            margin-bottom: 8px;
-        }
-
-        .location {
-            color: var(--green);
-
-            font-size: 13px;
-
-            font-weight: 600;
-
-            margin-bottom: 15px;
-        }
-
-        .description {
-            max-width: 390px;
-
-            margin: auto;
-
-            color: #aeb3b4;
-
-            font-size: 14px;
-
-            line-height: 1.7;
-        }
-
-        /* =========================
-           SOCIALS
-        ========================== */
-
-        .socials {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            gap: 10px;
-
-            margin: 24px 0 28px;
-        }
-
-        .social {
-            width: 42px;
-            height: 42px;
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            border-radius: 12px;
-
-            background: rgba(255,255,255,0.04);
-
-            border: 1px solid var(--border);
-
-            color: white;
-
-            text-decoration: none;
-
-            transition:
-                transform 0.25s ease,
-                background 0.25s ease,
-                border-color 0.25s ease;
-        }
-
-        .social svg {
-            width: 19px;
-            height: 19px;
-
-            fill: currentColor;
-        }
-
-        .social:hover {
-            transform: translateY(-4px);
-
-            background: rgba(200,234,128,0.1);
-
-            border-color: rgba(200,234,128,0.3);
-
-            color: var(--green);
-        }
-
-        /* =========================
-           LINKS
-        ========================== */
-
-        .links {
-            display: flex;
-
-            flex-direction: column;
-
-            gap: 12px;
-        }
-
-        .link {
-            position: relative;
-
-            display: flex;
-
-            align-items: center;
-
-            width: 100%;
-
-            padding: 17px 18px;
-
-            border-radius: 14px;
-
-            background: rgba(255,255,255,0.045);
-
-            border: 1px solid var(--border);
-
-            color: white;
-
-            text-decoration: none;
-
-            transition:
-                transform 0.25s ease,
-                background 0.25s ease,
-                border-color 0.25s ease,
-                box-shadow 0.25s ease;
-        }
-
-        .link:hover {
-            transform: translateY(-3px);
-
-            background: rgba(200,234,128,0.08);
-
-            border-color: rgba(200,234,128,0.25);
-
-            box-shadow:
-                0 12px 30px rgba(0,0,0,0.25);
-        }
-
-        .link-icon {
-            width: 42px;
-            height: 42px;
-
-            flex-shrink: 0;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            border-radius: 11px;
-
-            background: rgba(255,255,255,0.07);
-
-            margin-right: 14px;
-        }
-
-        .link-icon svg {
-            width: 20px;
-            height: 20px;
-
-            fill: white;
-        }
-
-        .link-content {
-            flex: 1;
-
-            text-align: left;
-        }
-
-        .link-title {
-            display: block;
-
-            font-size: 14px;
-
-            font-weight: 700;
-
-            margin-bottom: 3px;
-        }
-
-        .link-description {
-            display: block;
-
-            font-size: 11px;
-
-            color: var(--muted);
-        }
-
-        .arrow {
-            color: #73797b;
-
-            font-size: 18px;
-
-            transition:
-                transform 0.25s ease,
-                color 0.25s ease;
-        }
-
-        .link:hover .arrow {
-            transform: translateX(4px);
-
-            color: var(--green);
-        }
-
-        /* =========================
-           WHATSAPP CTA
-        ========================== */
-
-        .contact {
-            margin-top: 14px;
-
-            display: flex;
-
-            align-items: center;
-
-            justify-content: center;
-
-            gap: 8px;
-
-            padding: 15px;
-
-            border-radius: 14px;
-
-            background: var(--green);
-
-            color: #0a0d09;
-
-            text-decoration: none;
-
-            font-size: 13px;
-
-            font-weight: 800;
-
-            transition:
-                transform 0.25s ease,
-                box-shadow 0.25s ease;
-        }
-
-        .contact:hover {
-            transform: translateY(-3px);
-
-            box-shadow:
-                0 12px 35px rgba(200,234,128,0.18);
-        }
-
-        .contact svg {
-            width: 18px;
-            height: 18px;
-
-            fill: currentColor;
-        }
-
-        /* =========================
-           FOOTER
-        ========================== */
-
-        .footer {
-            text-align: center;
-
-            margin-top: 25px;
-
-            padding-top: 20px;
-
-            border-top: 1px solid var(--border);
-
-            color: #626869;
-
-            font-size: 10px;
-
-            line-height: 1.6;
-        }
-
-        .footer strong {
-            color: #8b9192;
-        }
-
-        /* =========================
-           MOBILE
-        ========================== */
-
-        @media (max-width: 500px) {
-
-            .container {
-                padding: 18px 12px;
-                align-items: flex-start;
-            }
-
-            .wrapper {
-                padding: 22px 16px;
-
-                margin-top: 10px;
-
-                border-radius: 22px;
-            }
-
-            .top-bar {
-                margin-bottom: 25px;
-            }
-
-            .profile-image-wrapper,
-            .profile-image {
-                width: 96px;
-                height: 96px;
-            }
-
-            .name {
-                font-size: 26px;
-            }
-
-            .description {
-                font-size: 13px;
-            }
-
-            .link {
-                padding: 14px;
-            }
-
-            .link-icon {
-                width: 38px;
-                height: 38px;
-            }
-
-        }
-
-    </style>
 </head>
+
 
 <body>
 
-<div class="container">
-
-    <main class="wrapper">
-
-        <!-- TOP -->
-
-        <div class="top-bar">
-
-            <span class="brand">
-                @RayThompson
-            </span>
-
-            <span class="status">
-                <span class="status-dot"></span>
-                Available
-            </span>
-
-        </div>
+  <main class="page">
 
 
-        <!-- PROFILE -->
+    <!-- =======================================================
+         TOP BAR
+    ======================================================== -->
 
-        <section class="profile">
-
-            <div class="profile-image-wrapper">
-
-                <img
-                    class="profile-image"
-                    src="./image.png"
-                    alt="Thompson Solomon"
-                >
-
-                <span class="verified">
-                    ✓
-                </span>
-
-            </div>
+  
 
 
-            <h1 class="name">
-                Thompson Solomon
-            </h1>
+    <!-- =======================================================
+         PROFILE CARD
+    ======================================================== -->
+
+    <article class="profile-card">
 
 
-            <p class="location">
-                Lagos, Nigeria
-            </p>
+      <!-- =====================================================
+           PROFILE HEADER
+      ====================================================== -->
 
+      <header class="profile">
+  <div class="topbar">
 
-            <p class="description">
-                Software developer building fast, useful and
-                scalable digital experiences for the web and mobile.
-            </p>
+      <div class="handle">
 
-        </section>
+        <span>@</span>RayThompson
 
+      </div>
 
-        <!-- SOCIALS -->
+      <div
+        class="status"
+        aria-label="Currently available"
+      >
 
-        <div class="socials">
+        <span
+          class="status-dot"
+          aria-hidden="true"
+        ></span>
 
-            <!-- Github -->
+        Available
 
-            <a
-                class="social"
-                href="https://github.com/thompsonsolomon"
-                target="_blank"
-                aria-label="GitHub"
-            >
+      </div>
 
-                <svg viewBox="0 0 24 24">
-                    <path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.09.66-.22.66-.48v-1.69c-2.78.61-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03A9.56 9.56 0 0 1 12 6.84c.85 0 1.71.11 2.5.33 1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85V21c0 .27.18.58.67.48A10.01 10.01 0 0 0 22 12 10 10 0 0 0 12 2Z"/>
-                </svg>
+    </div>
 
-            </a>
+        <div class="avatar-wrapper">
 
+          <img
+            class="avatar"
+            src="./image.png"
+            alt="Thompson Solomon, also known as RayThompson"
+            width="96"
+            height="96"
+            fetchpriority="high"
+            decoding="async"
+          >
 
-            <!-- LinkedIn -->
-
-            <a
-                class="social"
-                href="https://www.linkedin.com/in/thompson-solomon-87283a232"
-                target="_blank"
-                aria-label="LinkedIn"
-            >
-
-                <svg viewBox="0 0 24 24">
-                    <path d="M19 3A2 2 0 0 1 21 5V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H19M8 18V10H5.5V18H8M6.75 8.87A1.5 1.5 0 1 0 6.75 5.87A1.5 1.5 0 0 0 6.75 8.87M18.5 18V13.5C18.5 11.02 17.16 9.57 15.14 9.57C14.17 9.57 13.51 10.1 13.22 10.59V10H10.72V18H13.22V13.8C13.22 12.69 13.43 11.82 14.79 11.82C16.13 11.82 16.15 12.88 16.15 13.87V18H18.5Z"/>
-                </svg>
-
-            </a>
-
-
-            <!-- X -->
-
-            <a
-                class="social"
-                href="https://x.com/ThompsonSo86878"
-                target="_blank"
-                aria-label="X"
-            >
-
-                <svg viewBox="0 0 24 24">
-                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817-5.963 6.817H1.684l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.45-6.231Zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77Z"/>
-                </svg>
-
-            </a>
-
-
-            <!-- Instagram -->
-
-            <a
-                class="social"
-                href="https://www.instagram.com/thompsonsolomon87"
-                target="_blank"
-                aria-label="Instagram"
-            >
-
-                <svg viewBox="0 0 24 24">
-                    <path d="M7.8 2h8.4A5.8 5.8 0 0 1 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8A5.8 5.8 0 0 1 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2Zm-.2 2A3.6 3.6 0 0 0 4 7.6v8.8A3.6 3.6 0 0 0 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6A3.6 3.6 0 0 0 16.4 4H7.6ZM17.25 5.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"/>
-                </svg>
-
-            </a>
+          <span
+            class="verified"
+            aria-label="Verified profile"
+            title="Verified profile"
+          >
+            ✓
+          </span>
 
         </div>
 
 
-        <!-- LINKS -->
-
-        <div class="links">
-
-
-            <!-- Github -->
-
-            <a
-                class="link"
-                href="https://github.com/thompsonsolomon"
-                target="_blank"
-            >
-
-                <div class="link-icon">
-
-                    <svg viewBox="0 0 24 24">
-                        <path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.09.66-.22.66-.48v-1.69c-2.78.61-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03A9.56 9.56 0 0 1 12 6.84c.85 0 1.71.11 2.5.33 1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85V21c0 .27.18.58.67.48A10.01 10.01 0 0 0 22 12 10 10 0 0 0 12 2Z"/>
-                    </svg>
-
-                </div>
-
-                <div class="link-content">
-
-                    <span class="link-title">
-                        GitHub
-                    </span>
-
-                    <span class="link-description">
-                        Explore my code and projects
-                    </span>
-
-                </div>
-
-                <span class="arrow">
-                    →
-                </span>
-
-            </a>
+        <h1 class="name">
+          Thompson Solomon
+        </h1>
 
 
-            <!-- Portfolio -->
-
-            <a
-                class="link"
-                href="https://thompsonsolomonportfolio.netlify.app/"
-                target="_blank"
-            >
-
-                <div class="link-icon">
-
-                    <svg viewBox="0 0 24 24">
-                        <path d="M12 2A10 10 0 1 0 12 22A10 10 0 0 0 12 2ZM12 4C13.6 5.4 14.6 7.4 14.9 10H9.1C9.4 7.4 10.4 5.4 12 4ZM4 12C4 11.3 4.1 10.6 4.3 10H7.1C7 10.7 7 11.3 7 12C7 12.7 7 13.3 7.1 14H4.3C4.1 13.4 4 12.7 4 12ZM12 20C10.4 18.6 9.4 16.6 9.1 14H14.9C14.6 16.6 13.6 18.6 12 20ZM16.9 14H19.7C19.9 13.4 20 12.7 20 12C20 11.3 19.9 10.6 19.7 10H16.9C17 10.7 17 11.3 17 12C17 12.7 17 13.3 16.9 14Z"/>
-                    </svg>
-
-                </div>
-
-                <div class="link-content">
-
-                    <span class="link-title">
-                        Portfolio
-                    </span>
-
-                    <span class="link-description">
-                        See what I've been building
-                    </span>
-
-                </div>
-
-                <span class="arrow">
-                    →
-                </span>
-
-            </a>
+        <p class="alias">
+          @RayThompson · Software Developer
+        </p>
 
 
-            <!-- LinkedIn -->
-
-            <a
-                class="link"
-                href="https://www.linkedin.com/in/thompson-solomon-87283a232"
-                target="_blank"
-            >
-
-                <div class="link-icon">
-
-                    <svg viewBox="0 0 24 24">
-                        <path d="M19 3A2 2 0 0 1 21 5V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H19M8 18V10H5.5V18H8M6.75 8.87A1.5 1.5 0 1 0 6.75 5.87A1.5 1.5 0 0 0 6.75 8.87M18.5 18V13.5C18.5 11.02 17.16 9.57 15.14 9.57C14.17 9.57 13.51 10.1 13.22 10.59V10H10.72V18H13.22V13.8C13.22 12.69 13.43 11.82 14.79 11.82C16.13 11.82 16.15 12.88 16.15 13.87V18H18.5Z"/>
-                    </svg>
-
-                </div>
-
-                <div class="link-content">
-
-                    <span class="link-title">
-                        LinkedIn
-                    </span>
-
-                    <span class="link-description">
-                        Connect with me professionally
-                    </span>
-
-                </div>
-
-                <span class="arrow">
-                    →
-                </span>
-
-            </a>
+        <p class="location">
+          📍 Lagos, Nigeria
+        </p>
 
 
-            <!-- X -->
-
-            <a
-                class="link"
-                href="https://x.com/ThompsonSo86878"
-                target="_blank"
-            >
-
-                <div class="link-icon">
-
-                    <svg viewBox="0 0 24 24">
-                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817-5.963 6.817H1.684l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.45-6.231Zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77Z"/>
-                    </svg>
-
-                </div>
-
-                <div class="link-content">
-
-                    <span class="link-title">
-                        X / Twitter
-                    </span>
-
-                    <span class="link-description">
-                        Follow my thoughts and updates
-                    </span>
-
-                </div>
-
-                <span class="arrow">
-                    →
-                </span>
-
-            </a>
+        <p class="bio">
+          I build fast, useful and scalable digital experiences
+          for the web and mobile — from polished interfaces
+          to real products that solve problems.
+        </p>
 
 
-        </div>
+      </header>
 
 
-        <!-- WHATSAPP -->
+      <!-- =====================================================
+           SOCIAL LINKS
+      ====================================================== -->
+
+      <nav
+        class="socials"
+        aria-label="Social media profiles"
+      >
+
+
+        <!-- GITHUB -->
 
         <a
-            class="contact"
-            href="https://wa.me/2349124919117?text=hello%20solomon%20can%20i%20meet%20you?"
-            target="_blank"
+          class="social"
+          href="https://github.com/thompsonsolomon"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Visit Thompson Solomon on GitHub"
         >
 
-            <svg viewBox="0 0 24 24">
-                <path d="M12 2A10 10 0 0 0 2 12C2 13.8 2.47 15.5 3.36 17L2 22L7.15 20.65C8.59 21.53 10.27 22 12 22A10 10 0 1 0 12 2ZM12 20C10.5 20 9.05 19.58 7.8 18.8L7.5 18.62L4.45 19.45L5.27 16.47L5.08 16.16C4.37 14.94 4 13.5 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20ZM16.35 13.92C16.11 13.8 14.93 13.22 14.71 13.14C14.48 13.05 14.31 13.01 14.14 13.25C13.97 13.51 13.48 14.07 13.33 14.24C13.19 14.41 13.04 14.43 12.8 14.31C10.85 13.34 9.57 12.58 8.29 10.39C7.95 9.81 8.63 9.83 9.25 8.59C9.32 8.42 9.29 8.27 9.23 8.15C9.17 8.03 8.67 6.84 8.47 6.35C8.27 5.86 8.06 5.94 7.91 5.93C7.77 5.92 7.61 5.92 7.44 5.92C7.27 5.92 7 5.98 6.77 6.23C6.54 6.48 5.89 7.09 5.89 8.28C5.89 9.47 6.79 10.61 6.92 10.77C7.04 10.93 8.69 13.48 11.22 14.57C12.82 15.26 13.45 15.32 14.26 15.2C14.75 15.13 15.75 14.59 15.96 14C16.17 13.41 16.17 12.91 16.11 12.8C16.05 12.69 15.9 12.63 15.65 12.51Z"/>
-            </svg>
+          <svg
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
 
-            Chat with me on WhatsApp
+            <path d="M12 .5a12 12 0 0 0-3.79 23.39c.6.11.82-.26.82-.58v-2.04c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.74.08-.74 1.2.09 1.83 1.23 1.83 1.23 1.07 1.83 2.81 1.3 3.49.99.11-.77.42-1.3.76-1.6-2.67-.3-5.47-1.34-5.47-5.95 0-1.31.47-2.38 1.23-3.22-.12-.3-.53-1.52.12-3.17 0 0 1-.32 3.3 1.23a11.4 11.4 0 0 1 6-.01c2.3-1.55 3.3-1.23 3.3-1.23.65 1.65.24 2.87.12 3.17.77.84 1.23 1.91 1.23 3.22 0 4.62-2.81 5.64-5.49 5.94.43.37.81 1.1.81 2.22v3.29c0 .32.22.69.83.57A12 12 0 0 0 12 .5Z"/>
+
+          </svg>
 
         </a>
 
 
-        <!-- FOOTER -->
+        <!-- LINKEDIN -->
 
-        <footer class="footer">
+        <a
+          class="social"
+          href="https://www.linkedin.com/in/thompson-solomon-87283a232"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Visit Thompson Solomon on LinkedIn"
+        >
 
-            Built with curiosity & code by
-            <strong>RayThompson</strong>
+          <svg
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
 
-        </footer>
+            <path d="M20.45 20.45h-3.56v-5.58c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.44-2.13 2.94v5.68H9.35V8.99h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.26 2.37 4.26 5.46v6.29ZM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14ZM3.56 20.45h3.57V8.99H3.56v11.46ZM22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.72V1.72C24 .77 23.21 0 22.23 0Z"/>
 
-    </main>
+          </svg>
 
-</div>
+        </a>
+
+
+        <!-- X -->
+
+        <a
+          class="social"
+          href="https://x.com/ThompsonSo86878"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Visit Thompson Solomon on X"
+        >
+
+          <svg
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+
+            <path d="M18.9 2H22l-6.77 7.74L23.2 22h-6.24l-4.89-6.39L6.48 22H3.36l7.24-8.28L2.8 2h6.4l4.42 5.84L18.9 2Zm-1.1 17.75h1.73L8.28 4.12H6.42L17.8 19.75Z"/>
+
+          </svg>
+
+        </a>
+
+
+        <!-- INSTAGRAM -->
+
+        <a
+          class="social"
+          href="https://www.instagram.com/thompsonsolomon87"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Visit Thompson Solomon on Instagram"
+        >
+
+          <svg
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+
+            <path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9a5.5 5.5 0 0 1-5.5 5.5h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2Zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm5.25-3.25a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5Z"/>
+
+          </svg>
+
+        </a>
+
+      </nav>
+
+
+      <!-- =====================================================
+           LINKS
+      ====================================================== -->
+
+      <div class="section-label">
+        Explore
+      </div>
+
+
+      <div class="links">
+
+
+        <!-- PORTFOLIO -->
+
+        <a
+          class="link-card"
+          href="https://thompsonsolomonportfolio.netlify.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Visit Thompson Solomon's portfolio"
+        >
+
+          <div class="link-icon">
+
+            <svg
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+
+              <path d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2Zm0 16H5V5h14v14ZM7 7h10v2H7V7Zm0 4h10v2H7v-2Zm0 4h6v2H7v-2Z"/>
+
+            </svg>
+
+          </div>
+
+
+          <div class="link-content">
+
+            <div class="link-title">
+              My Portfolio
+            </div>
+
+            <div class="link-description">
+              Explore my work, projects and digital experiments.
+            </div>
+
+          </div>
+
+
+          <div class="arrow" aria-hidden="true">
+            →
+          </div>
+
+        </a>
+
+
+        <!-- GITHUB -->
+
+        <a
+          class="link-card"
+          href="https://github.com/thompsonsolomon"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Visit Thompson Solomon's GitHub"
+        >
+
+          <div class="link-icon">
+
+            <svg
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+
+              <path d="M12 .5a12 12 0 0 0-3.79 23.39c.6.11.82-.26.82-.58v-2.04c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.74.08-.74 1.2.09 1.83 1.23 1.83 1.23 1.07 1.83 2.81 1.3 3.49.99.11-.77.42-1.3.76-1.6-2.67-.3-5.47-1.34-5.47-5.95 0-1.31.47-2.38 1.23-3.22-.12-.3-.53-1.52.12-3.17 0 0 1-.32 3.3 1.23a11.4 11.4 0 0 1 6-.01c2.3-1.55 3.3-1.23 3.3-1.23.65 1.65.24 2.87.12 3.17.77.84 1.23 1.91 1.23 3.22 0 4.62-2.81 5.64-5.49 5.94.43.37.81 1.1.81 2.22v3.29c0 .32.22.69.83.57A12 12 0 0 0 12 .5Z"/>
+
+            </svg>
+
+          </div>
+
+
+          <div class="link-content">
+
+            <div class="link-title">
+              GitHub
+            </div>
+
+            <div class="link-description">
+              Code, open-source projects and experiments.
+            </div>
+
+          </div>
+
+
+          <div class="arrow" aria-hidden="true">
+            →
+          </div>
+
+        </a>
+
+
+        <!-- LINKEDIN -->
+
+        <a
+          class="link-card"
+          href="https://www.linkedin.com/in/thompson-solomon-87283a232"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Visit Thompson Solomon's LinkedIn"
+        >
+
+          <div class="link-icon">
+
+            <svg
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+
+              <path d="M20.45 20.45h-3.56v-5.58c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.44-2.13 2.94v5.68H9.35V8.99h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.26 2.37 4.26 5.46v6.29ZM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14ZM3.56 20.45h3.57V8.99H3.56v11.46ZM22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.72V1.72C24 .77 23.21 0 22.23 0Z"/>
+
+            </svg>
+
+          </div>
+
+
+          <div class="link-content">
+
+            <div class="link-title">
+              LinkedIn
+            </div>
+
+            <div class="link-description">
+              Connect with me professionally.
+            </div>
+
+          </div>
+
+
+          <div class="arrow" aria-hidden="true">
+            →
+          </div>
+
+        </a>
+
+
+        <!-- X -->
+
+        <a
+          class="link-card"
+          href="https://x.com/ThompsonSo86878"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Visit Thompson Solomon on X"
+        >
+
+          <div class="link-icon">
+
+            <svg
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+
+              <path d="M18.9 2H22l-6.77 7.74L23.2 22h-6.24l-4.89-6.39L6.48 22H3.36l7.24-8.28L2.8 2h6.4l4.42 5.84L18.9 2Zm-1.1 17.75h1.73L8.28 4.12H6.42L17.8 19.75Z"/>
+
+            </svg>
+
+          </div>
+
+
+          <div class="link-content">
+
+            <div class="link-title">
+              X / Twitter
+            </div>
+
+            <div class="link-description">
+              Thoughts, tech and things I'm building.
+            </div>
+
+          </div>
+
+
+          <div class="arrow" aria-hidden="true">
+            →
+          </div>
+
+        </a>
+
+
+        <!-- INSTAGRAM -->
+
+        <a
+          class="link-card"
+          href="https://www.instagram.com/thompsonsolomon87"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Visit Thompson Solomon's Instagram"
+        >
+
+          <div class="link-icon">
+
+            <svg
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+
+              <path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9a5.5 5.5 0 0 1-5.5 5.5h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2Zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm5.25-3.25a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5Z"/>
+
+            </svg>
+
+          </div>
+
+
+          <div class="link-content">
+
+            <div class="link-title">
+              Instagram
+            </div>
+
+            <div class="link-description">
+              More of me, outside the code.
+            </div>
+
+          </div>
+
+
+          <div class="arrow" aria-hidden="true">
+            →
+          </div>
+
+        </a>
+
+      </div>
+
+
+      <!-- =====================================================
+           CONTACT CTA
+      ====================================================== -->
+
+      <a
+        class="whatsapp"
+        href="https://wa.me/2349124919117?text=Hello%20Solomon%2C%20can%20I%20meet%20you%3F"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Chat with Thompson Solomon on WhatsApp"
+      >
+
+        <svg
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+        >
+
+          <path d="M20.52 3.48A11.85 11.85 0 0 0 12.09 0C5.54 0 .2 5.34.2 11.89c0 2.09.55 4.13 1.6 5.93L.1 24l6.33-1.66a11.88 11.88 0 0 0 5.66 1.44h.01c6.54 0 11.89-5.34 11.89-11.89 0-3.18-1.24-6.16-3.47-8.41ZM12.1 21.75h-.01a9.85 9.85 0 0 1-5.02-1.38l-.36-.21-3.75.98 1-3.65-.23-.38a9.86 9.86 0 1 1 8.37 4.64Zm5.41-7.39c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.46-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.14-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.49s1.07 2.89 1.22 3.09c.15.2 2.1 3.2 5.09 4.49.71.31 1.27.5 1.7.64.71.23 1.36.2 1.87.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35Z"/>
+
+        </svg>
+
+        Chat with me on WhatsApp
+
+      </a>
+
+
+    </article>
+
+
+    <!-- =======================================================
+         FOOTER
+    ======================================================== -->
+
+    <footer>
+
+      ©
+
+      <span id="year"></span>
+
+      <strong>
+        Thompson Solomon
+      </strong>
+
+      · RayThompson
+
+    </footer>
+
+
+  </main>
+
+
+  <!-- =========================================================
+       YEAR
+  ========================================================== -->
+
+  <script>
+
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+  </script>
 
 </body>
+
 </html>
